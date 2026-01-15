@@ -88,34 +88,39 @@ header #burger_menu{
 
 /* Main */
 
-main div{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+main{
+    margin: auto;
+    max-width: 1440px;
+    background-image: url(../img/imagedefond.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+main .grandediv{
+    display: flex;
+    padding: 50px;
+    gap: 280px;
     margin: 30px auto;
-    gap: 60px;
     max-width: 1150px;
 }
 
-main div .gauche #infos{
-    display: inline-block;
+main .grandediv .gauche p{
+    padding-bottom: 15px;
 }
 
-main div .gauche #infos p{
+main .grandediv .gauche #infos{
+    display: inline;
+}
+
+main .grandediv .gauche #infos p{
     font-family: var(--gloriapolice);
     font-size: 20px;
     margin-bottom: 20px;
     padding-left: 30px;
 }
 
-main div .droite #formulaire div{
-    display: table-caption;
-    margin: 0;
-    margin-bottom: 5px;
-    gap: 0;
-}
-
-main div .droite #formulaire div #np,
-main div .droite #formulaire div #mail{
+main .grandediv .droite #formulaire .petitediv #np,
+main .grandediv .droite #formulaire .petitediv #mail{
     border: 1px solid #818A91;
     padding: 5px 8px;
     width: 350px;
@@ -124,12 +129,12 @@ main div .droite #formulaire div #mail{
     margin-bottom: 12px;
 }
 
-main div .droite #formulaire div label{
+main .grandediv .droite #formulaire .petitediv label,input{
     font-family: var(--notosans);
     font-size: 16px;
 }
 
-main div .droite #formulaire div #sujet{
+main .grandediv .droite #formulaire .petitediv #sujet{
     border: 1px solid #818A91;
     padding: 5px 8px;
     width: 350px;
@@ -138,15 +143,11 @@ main div .droite #formulaire div #sujet{
     margin-bottom: 12px;
 }
 
-main div .droite{
-    background-image: url(../img/imagedefond.png);
-    background-position: right;
-    background-repeat: no-repeat;
+main .grandediv .droite{
     align-content: space-evenly;
-    background-size: 550px;
 }
 
-main div .droite #formulaire div #btn{
+main .grandediv .droite #formulaire .petitediv #btn{
     border: 1px solid var(--rose);
     background-color: #FBBBCD;
     padding: 7px 10px;
@@ -154,7 +155,7 @@ main div .droite #formulaire div #btn{
     color: white;
 }
 
-main div .droite #formulaire div #btn:hover{
+main .grandediv .droite #formulaire .petitediv #btn:hover{
     background-color: white;
     color: var(--rose);
     transition: all 0.3s ease-in-out;
@@ -216,11 +217,16 @@ footer .nav #Accueil{
 
     main{ 
         padding: 0 15px;
+        background-position: bottom;
     }
 
-    main div{ 
-        display: inline;
-        text-align: -webkit-center;
+    main .grandediv{ 
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    main .grandediv .droite #formulaire .petitediv{
+        display: grid;
     }
 
     footer{
@@ -242,7 +248,7 @@ footer .nav #Accueil{
     }
 
     main{
-        padding: 0 15px;
+        padding: 0;
     }
 
     h1{
@@ -253,26 +259,22 @@ footer .nav #Accueil{
         font-size: 12px;
     }
 
-    main div{
-        text-align: left;
-    }
-
-    main div .gauche #infos h2,
-    main div .gauche #infos p{
+    main .grandediv .gauche #infos h2,
+    main .grandediv .gauche #infos p{
         font-size: 12px;
     }
 
-    main div .droite #formulaire div #np,
-    main div .droite #formulaire div #mail{
-    width: 240px;
+    main .grandediv .droite #formulaire .petitediv #np,
+    main .grandediv .droite #formulaire .petitediv #mail{
+        width: 220px;
     }
 
-    main div .droite #formulaire div #sujet{
-    width: 240px;
-    height: 160px;
+    main .grandediv .droite #formulaire .petitediv #sujet{
+        width: 220px;
+        height: 160px;
     }
 
-    main div .droite{
+    main .grandediv .droite{
         background-size: 310px;
         background-position: left;
     }
